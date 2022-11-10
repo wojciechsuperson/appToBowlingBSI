@@ -8,6 +8,9 @@ public class BowlingGame {
     }
 
     public void roll(int p) {
+        if(p < 0 || p > 10){
+            throw new IllegalArgumentException("Bad value of hitted pins!");
+        }
         rolls[currentRoll++] = p;
     }
 
